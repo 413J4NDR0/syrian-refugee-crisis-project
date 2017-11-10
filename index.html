@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="backgroundImage"></div>
+    <div class="col-12"style="color:#555;text-align:justify;line-height: 150%;">
+        <blockquote class="text" style="margin-left:7%;margin-right:7%;">
+            At the early stages of my career when I was covering a war zone I used to photograph the obvious things, the destruction, the rubble, the funerals.
+            However, along the way I started thinking <b style="color:black">deeper than the obvious</b>, searching for the invisible images, stories to document and tell within these
+            war zones, and who are the most affected in these war zones: <b style="color:black">the people</b>.
+            <div style="text-align:right; margin:0"><b style="color:black;">&mdash; Muhammed Muheisen</b>, <br />Pulitzer Prize Winning Photographer for the Associated Press</div>
+        </blockquote>
+    </div>
+    <div class="col-12">
+        <h1 style="text-decoration:underline; margin-left:5%;">Visualizing Suffering</h1>
+        <p class="text">
+            On 2 September 2015,  three-year-old Alan Kurdi’s lifeless body was photographed on the shores of Turkey’s Mediterranean coast
+            after his family’s overcrowded boat capsized in the Aegean Sea. By 3 September, the photograph became currency in the realm of mass
+            media, gaining exposure in news circuits and social media circles. Though the Syrian Civil War had been festering the previous four and a half
+            years, the escalating refugee crisis was largely neglected by the international community. This image brought
+            the crisis to the forefront of international discourse by augmenting the dialogue with a human dimension:
+            the Syrian Refugee Crisis became a human issue on an international scale.
+        </p>
+        <p class="text">
+            Within days, this shift in the media narrative was reflected in the previously indifferent political narrative. Politicians across Europe
+            cited the image in their decisions to welcome Syria’s refugees: 2 days after the photo’s publication, Germany agreed to open their
+            borders to thousands of refugees stranded in Hungary; 4 days after, British Prime Minister David Cameron pledged to accept 4,000 refugees
+            every year until 2020; 19 days after, the European Union developed a resolution to resettle the 120,000 refugees stranded in Greece and Italy
+            (Kingsly).
+            Since the photo’s publication, the term “Syrian Refugee Crisis” cemented its place in news media, reflected by a surge of interest in
+            Google Search Trends.
+        </p>
+        <p class="text">
+            However, as memories of the Alan Kurdi photo began to fade, so did the compassion. Hungary completed the construction of their southern border fence
+            by the end of 2015, stifling the refugee flow; eventually, the Balkan route was officially severed as countries throughout Southeastern Europe closed their
+            borders, though many refugees continued to cross with ever-increasing peril. The EU-Turkey migration resolution of March 2016 allows the immediate deportation of irregular 
+            migrants back to Greece. Right-wing nationalism swept across Europe, redefining the refugee narrative to one of fear and division (Kingsly).
+        </p>
+        <p class="text">
+            The fundamental question this project asks is: <b>
+                How has photojournalism in Western media influenced our understanding of
+                the refugee crisis, and what are the long term impacts of these photographs?
+            </b>
+        </p>
+        <div style="display:block; margin:auto; padding-right:1%; width:70%; text-align:justify; overflow:hidden;">
+            <a href="https://trends.google.com/trends/explore?date=2015-06-01%202017-07-19&q=%2Fm%2F0134cz66" target="_blank"><img src="img/googleTrends.png" style="width:100%; margin-bottom:1.5%;box-shadow:0px 6px 12px 0px rgba(0,0,0,0.4);" /></a>
+            Google Trends data from June 2015 to May 2017 for the topic European Migrant Crisis.
+            There was a massive surge in popularity for this topic from 30 August to 19 September, coinciding with the Alan Kurdi photo, before trailing off once again.
+            Source: Google
+        </div>
+        </div>
+    
+    <div class="col-12">
+        <div style="margin-left:1%;margin-right:15% ;width: 25%; float:right">
+            <img src="img/pewResearch.png" id="pew" style="cursor:pointer;width:100%;" />
+        </div>
+        <p class="text" >
+            This Duke University Data+ project tracked photojournalism on the Syrian Refugee Crisis, one of the greatest humanitarian issues of the 21st Century.
+            Using the Associated Press Photograph database, we sought to create data visualizations that communicate which stories have been disseminated
+            by Western news agencies. A 2014 Pew Research Center report analyzed media outlets by the
+            political leanings of their readership, and the following eight news agencies were chosen by our group to represent the full political spectrum:
+            <b>The New York Times, The Washington Post, The Wall Street Journal, NBC, CNN, The BBC, The Guardian, and FOX News</b>. <br /> <br /> For more detailed
+            information, please visit our <a href="methodology.html" style="color:black; text-decoration:none; font-weight:bold;">Methodologies</a> section.
+        </p>
+        <p class="text warning">
+            Unfortunately, our visualization and survey sections are not available for mobile viewing. Please visit our full site to view those sections.
+        </p>
+    </div>
+    <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+        <span class="modalClose" onclick="document.getElementById('myModal').style.display='none'">X</span>
+        <img class="modal-content" id="img" style="width:45%">
+    </div>
+    <div class="col-12">
+        <h2 style="text-decoration:underline; margin-left:5%;">Sources</h2>
+        <p class="text" style="text-indent:-5%; margin-left:5%;">
+            1. Kingsley, Patrick. “The Death of Alan Kurdi: One Year on, Compassion towards Refugees Fades.”
+            The Guardian,Guardian News and Media, 2 Sept. 2016,
+            <a href="https://www.theguardian.com/world/2016/sep/01/alan-kurdi-death-one-year-on-compassion-towards-refugees-fades" target="_blank" style="color:black; text-decoration:none; font-weight:bold">www.theguardian.com.*</a>.
+            Accessed 20 June 2017.
+        </p>
+        <p class="text" style="text-indent:-5%; margin-left:5%;">
+            2. Mitchell, Amy, Jeffrey Gottfried, Jocelyn Kiley, and Katerina Eva Matsa. "Political Polarization & Media Habits." Pew Research Center's Journalism Project. N.p., 20 Oct. 2014. Web. 26 May 2017.
+
+        </p>
+    </div>
+
+    <div class="footer col-12">
+        Photo Credit: Associated Press/Muhammed Muheisen
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script>
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('pew');
+        var modalImg = document.getElementById("img");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+
+        }
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

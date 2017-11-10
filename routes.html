@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="col-12">
+        <h2 id="mt" style="min-width:40%;color:white">Main Route Taken by Syrian Refugees</h2>
+        <div class="dropdown" id="routes">
+            <button class="dropbtn">Change View</button>
+            <div class="dropdown-content">
+                <a id="mainRoute" href="#">Main Route</a>
+                <a id="seaRoute" href="#">Alternate Sea Routes</a>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #6c6c71;color: white;min-height:90%">
+        <div class="col-12">
+            <div id="europe" style="min-height:510px"></div>
+            <div class="info">
+                <h3 id="cn"></h3>
+                <p id="rs"></p>
+            </div>
+            <button id="nextC"><span>Next Country</span></button>
+            <button id="prevC"><span>Prev Country</span></button>
+        </div>
+    </div>
+    <div class="col-12">
+        <h2 style="text-decoration:underline; margin-left:5%;">Information and Sources</h2>
+        <p class="text">
+            This visualization provides detailed views of the routes Syrian refugees take to reach target countries. According to the UNHCR Syrian Asylum Applications Portal, there are
+            only 7 countries that have received over 20,000 asylum petitions from April 2011 to May 2017: Germany, Sweden, Hungary, Austria, The Netherlands, Bulgaria and Denmark. 
+            In addition, Belgium had recevied 19,000 petitions from Syrian Refugees, and are likely to have over 20,000 by the end of 2017.
+            Thus, our group has labeled these eight nations as &ldquo;target countries&rdquo;, although Hungary and Bulgaria have high proportions of asylum seekers and refugees that continue onward rather than remain in the country, likely due to bureacratic delays and other policies regarding refugees.
+            <br />The following views are available:
+            <ul style="margin-left:10%;font-size:18px">
+                <li>The Eastern Mediterranean Route from Turkey to Greece, as well as onward movements farther into Europe;</li>
+                <li>Auxillary routes through the central and western Mediterranean into Italy and Spain, respectively. </li>
+            </ul>
+        </p>
+        <p class="text">
+            For each stop along the route, an information window is shown detailing the overall policies the country has taken in regards to refugees, while a gallery of AP photographs documents how these policies have affected refugees in practice.
+            The gallery shows the top ten (or less) cited photos in that country, in descending order.
+        </p>
+        <p class="text">
+            Change the current view using the Change View menu. <br />
+            The next or previous country in the route can be shown using the Next/Previous Country buttons, or the up and down arrow keys. <br />
+            Pictures in the gallery can be navigated using the left and right arrow keys.
+        </p>
+        <p class="text">
+            Information and data for the routes used by Syrian refugees was taken from the
+            Office of the United Nations High Commissioner for Refugees (UNHCR) report <a href="http://www.unhcr.org/en-us/news/updates/2017/2/58b449f54/desperate-journeys-refugees-migrants-entering-crossing-europe-via-mediterranean.html" target="_blank" style="color:black; text-decoration:none">
+                <b>Desperate Journeys</b>
+            </a> published in February 2017. Asylum Petition data was taken from the UNHCR <a href="http://data.unhcr.org/syrianrefugees/asylum.php" target="_blank" style="color:black; text-decoration:none"><b>Syrian Asylum Applications Portal</b></a>.
+        </p>
+        <div class="col-12">
+            <h2 style="text-decoration:underline; margin-left:5%;">Sources</h2>
+            <p class="text" style="text-indent:-5%; margin-left:5%;">
+                1. “Desperate Journeys. Refugees and Migrants Entering and Crossing Europe via the Mediterranean and Western Balkans Routes.” United Nations High Commissioner for Refugees, United Nations, Feb. 2017, <a href="http://www.unhcr.org/en-us/news/updates/2017/2/58b449f54/desperate-journeys-refugees-migrants-entering-crossing-europe-via-mediterranean.html" target="_blank" style="color:black; text-decoration:none"><b>www.unhcr.org.*</b></a>. Accessed 10 July 2017.
+            </p>
+            <p class="text" style="text-indent:-5%; margin-left:5%;">
+                2. “Syria Regional Refugee Response.” United Nations High Commissioner for Refugees, United Nations, <a href="http://data.unhcr.org/syrianrefugees/asylum.php" target="_blank" style="color:black; text-decoration:none"><b> data.unhcr.org.*</b></a>. Accessed 10 July 2017.
+            </p>
+        </div>
+    </div>
+    <div class="galleryWrap">
+        <span class="galleryWrap_title"></span>
+
+        <div class="slideshow-container" id="cont">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div id="contentText"></div>
+        <br />
+        <div id="dotWrap" style="text-align:center"></div>
+
+    </div>
+
+    <div class="footer col-12">
+        Photo Credit: Associated Press
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script src="js/europe.js"></script>
+    <script src="js/dynamicMap.js"></script>
+    <script src="js/route.js"></script>
+    <script>
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

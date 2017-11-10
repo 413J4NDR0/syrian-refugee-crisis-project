@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="backgroundImage" style="background-image:url(img/background/serbia1.jpg); background-position:50% 55%;"></div>
+    
+    <div class="col-12">
+        <h1 style="text-decoration:underline; margin-left:5%;">Acknowledgements</h1>
+        <p class="text">
+            Data+ Group 7 is comprised of Alejandro Ortega, Peilin Lai and Robbie Ha.
+            <br/>
+            <br />
+            Data+ Group 7 would like to thank the following people:
+            <br />
+            Our Project Manager <b>Jessica Hines</b>, and our Faculty Lead <b>Astrid Giugni</b>
+            <br />
+            From the Duke University Data+ and iiD Program:
+            <br />
+            <ul style="margin-left:10%;font-size:18px">
+                <li><b>Paul Bendich</b></li>
+                <li><b>Ashlee Valente</b></li>
+                <li><b>Ariel Dawn</b></li>
+                <li><b>Kathy Peterson</b></li>
+            </ul>
+        </p>
+        <p class="text">
+            From the news industry:
+            <br />
+            <ul style="margin-left:10%;font-size:18px">
+                <li>Chief Photographer for The Middle East, Afghanistan and Pakistan for the Associated Press <b>Muhammed Muheisen</b>;</li>
+                <li>Middle East Correspondent for The New York Times <b>Ben Hubbard</b>;</li>
+                <li>The Editor of The Washington Post <b>Martin Baron</b>;</li>
+                <li>The Editor-In-Chief of the Guardian <b>Katharine Viner</b></li>
+            </ul>
+        </p>
+        <p class="text">
+            In particular, we are grateful for the response from <b>Muhammed Muheisen</b>, and for his insight into photographing life and death amid conflict.
+        </p>
+    </div>
+    
+    <div class="footer col-12">
+        Photo Credit: Associated Press/Manu Brabo
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script>
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/icon32.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="backgroundImage" style="background-image:url(img/background/jordan1.jpg); background-position:50% 40%;"></div>
+    <div class="col-12" style="color:#555; text-align:justify;line-height: 150%;">
+        <blockquote class="text" style="margin-left:7%;margin-right:7%;">
+            I always told myself: if the news is right in front of you, just turn around you will witness a completely different scene.
+            A scene of life  when there’s death, a scene of children playing when
+            there is destruction, so the theme <b style="color:black">“life goes on, and a smile in the middle of the rubble”</b>
+            became the theme of my work that I’m known by. <br />
+            <div style="text-align:right; margin:0"><b style="color:black;">&mdash; Muhammed Muheisen</b>, <br />Pulitzer Prize Winning Photographer for the Associated Press</div>
+        </blockquote>
+    </div>
+
+    <div class="col-12">
+        <h1 style="text-decoration:underline; margin-left:5%;">Conclusion</h1>
+        <p class="text">
+            <b> How has photojournalism in Western media influenced our understanding of the refugee crisis, and what are the long term impacts of these photographs?</b>
+        </p>
+        <p class="text">
+            To understand how photos affect responses to humanitarian crises, the method of dissemination must be understood and analyzed.
+            Graphs comparing word proportions between news outlets were created to gauge the aggregate content of articles.
+            Words on or near the red line show that the frequency of that word was similar between news agencies.
+            Words above the red line appear more frequently by the news agency on the y-axis, and vice versa for the news agency on the x-axis.
+            News agencies can be grouped into those with above 100 articles (The Guardian, The BBC, and FOX News) and below (CNN, The New York Times, NBC News and The Washington Post); the Wall Street Journal was omitted due to lack of articles.
+            Comparisons were only conducted within these groups, resulting in the following nine graphs:
+        </p>
+
+    </div>
+    <div class="col-12">
+        <div class="slides" id="cont" style="display:block; background-color:#393949; padding:2%; border-radius:1.5%;width:auto;max-width:860px;">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+
+    <div class="col-12">
+        <p class="text">
+            Unsurprisingly, there were not any major discrepencies between news outlets, as the majority of differences were in the sub 0.01 frequency range.
+            The most volatile terms of note is "trump", in reference to the 45th President of The United States Donald Trump, and "isis", in reference to the Islamic State.
+            Both of the British agencies use Trump in a slightly lower proportion than FOX News, while the Washington Post consistently used Trump less than the The New York Times, NBC News and CNN.
+            While the overall theme of Syrian Refugees is certainly represented, analyzing the nuances of the subject treatment requires more advanced metrics.
+            Unfortunately, more sophisticated probability modeling and regression analyses could not be completed during the 10 weeks of the Data+ project.
+        </p>
+        <p class="text">
+            Among the more noteworthy observations was the ratio of photos to articles among the different news agencies.
+            While half of the news agencies had essentially a 1:1 ratio between AP photos and news articles, FOX News, CNN and NBC News had 1.5-2 times as many photos to articles.
+            The commonality between the three outlets is their structure as a television oriented network, as opposed to the editorial nature of the other outlets.
+            The viewership of FOX News, CNN and NBC News are likely to respond more readily to the visual stimulus of photos, resulting in gallery elements being the norm for the articles of these agencies.
+        </p>
+    </div>
+    <div class="col-12" id="chartWrap">
+        <p class="text">
+            The following chart shows the total photograph count and published photograph count on line graphs, while the number of articles using those photos are represented with bar graphs, on a month-by-month basis during the time period of June 2015 to May 2017.
+            Although the article count and total photograph count tend to coincide, there is an apparent under-coverage of events.
+            However, this is likely a byproduct of the 24 hour news cycle and the inner machinations of the news industry.
+        </p>
+        <canvas id="chart"></canvas>
+        <p style="display:block;width:65%; margin:auto;padding-top:1%; background-color:#393949; padding:2%; border-radius:10px;color:white">
+            Graph showing total photograph count, published photograph count and number of articles. Clicking on an element in the legend hides that element.
+        </p>
+    </div>
+    <div class="col-12">
+        <p class="text">
+            In regards to the news industry, our group received replies from the following indivduals, for which we are grateful:
+        </p>
+        <ul style="margin-left:10%;font-size:18px">
+            <li>Chief Photographer for The Middle East, Afghanistan and Pakistan for the Associated Press <b>Muhammed Muheisen</b>;</li>
+            <li>Middle East Correspondent for The New York Times <b>Ben Hubbard</b>;</li>
+            <li>The Editor of The Washington Post <b>Martin Baron</b>;</li>
+            <li>The Editor-In-Chief of the Guardian <b>Katharine Viner</b></li>
+        </ul>
+
+        <p class="text">
+            Ben Hubbard informed us that editors in New York choose the photos for articles, which lead us to contacting the editorial boards or administration of the eight news outlets.
+            Martin Baron gave us an enthusiastic reply and directed us to the Director of Photography for the Washington Post Maryanne Golon.
+            Unfortunately, a meeting could not be arranged due to scheduling conflicts.
+            Similarly, Katharine Viner could not respond to our inquiries due to scheduling conflicts.
+            Muhammed Muheisen responded to questions on the compositional aspects of his photographs in a thoughtful, sincere reply; much of this site is prefaced with quotes from his response.
+        </p>
+
+        <p class="text">
+            The survey results suggest that there is not a strong correlation between emotional impact and whether an individual believes the photograph was cited.
+            Furthermore, respondents correctly guessed the citation for 7 of the 10 images.
+            This suggests that respondents can sense whether a photo is news-worthy and find the story hidden in the photograph, in spite of the emotional impact on the indivdual level.
+            A large scale survey is required for results to be statistically valid, but the current survey suffices as an exploratory analysis.
+        </p>
+
+        <p class="text">
+            Regarding image selection, the following photograph of migrants walking out of Budapest, Hungary in September 2015 was the most cited, having been used in 15 articles.
+        </p>
+        <img id="img1" style="display:block; margin:auto; width:40%; background-color:#2f3f4f;padding:1.5%; border-radius:10px;color:white" />
+        <p class="text">
+            For pro-refugee individuals, this photo is the culmination of Hungary’s aggressive border policies, as exasperated refugees express their discontent at being stranded in the central European country.
+            However, the anti-refugee contingent interpret this demonstration as refugees disrespecting the law of the host country and inciting protests.
+            This photo has a duality that allows for different readings of the refugee crisis, and is partly why it was the most widely used photograph for a controversial issue.
+        </p>
+        <p class="text">
+            The following photograph of Syrian women waiting to receive aid in Lebanon September 2015 was cited in 14 articles:
+        </p>
+        <img id="img2" style="display:block; margin:auto; width:40%; background-color:#2f3f4f;padding:1.5%; border-radius:10px;color:white" />
+        <p class="text">
+            There is an apparent dichotomy between the published photos in Western nations versus those of the Middle East.
+            This photograph highlights the humanitarian dimension of the Syrian Refugee Crisis, whereas the Hungary photograph expresses the contentious political narrative surrounding the crisis.
+            By showing the refugees en masse in the Hungary photo, viewer sympathy is muddled and individual distinctions are lost.
+            The Lebanon photo accentuates the anxiety and exasperation of these Syrian women as they wait to receive aid in the refugee camp of a foreign country.
+        </p>
+        <p class="text">
+            There are limitations to the extent of our conclusions, however.
+            The lack of articles from The Wall Street Journal is not an indictment of their Syrian Refugee Crisis coverage.
+            Instead, this suggests that The Wall Street Journal has alterior sources for their images, whether it be Getty Images, Reuters or their own photographers.
+            The preceding applies to all agencies, and a potential avenue for future research lies in investigating these other photo databases.
+        </p>
+        <p class="text">
+            <b>The dissemination of Associated Press photographs is a reflection of the humanitarian and political narratives brought to the forefront of international discourse by the death of Alan Kurdi, a crisis that continues to affect millions two years after his death while Western nations continue petty partisan quarrels.</b>
+            <br/>
+            Our group hopes that this project accentuates the human dimension of the refugee crisis while contextualizing the political narrative.
+        </p>
+    </div>
+    <div class="footer col-12">
+        Photo Credit: Associated Press/Muhammed Muheisen
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script src="js/stats.js"></script>
+    <script>
+        for (var j = 0; j < 9; j++) {
+            createSlides(j, "cont", true, "img/plots/plot");
+        }
+        var photoURL = ["https://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2015/9/4/1441382634382/KP_446507_crop_640x480.jpg", "https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2015/09/07/21/6-lebanon-refugee-AP.jpg", "https://www.gannett-cdn.com/-mm-/1394c8f37a585788e783ac3cb27bf18f1aa967d2/c=75-0-949-657&r=x404&c=534x401/local/-/media/2015/08/20/USATODAY/USATODAY/635756838583254700-Ben-Carson.JPG,", "https://i.guim.co.uk/img/media/2eda6debda85dbbce5959816331f8ee8062153a8/32_287_2517_1511/master/2517.jpg?w=700&q=55&auto=format&usm=12&fit=max&s=80c2b7a9dc7a4b0cbca2f15ea64e0b8c", "http://c.files.bbci.co.uk/2054/production/_89267280_89267279.jpg"]
+        document.getElementById("img1").setAttribute("src", photoURL[0]);
+        document.getElementById("img2").setAttribute("src", photoURL[1]);
+        function createSlides(index, el, local, source) {
+            var slides = document.createElement("div");
+            var image = document.createElement("img");
+            slides.setAttribute("class", "mySlides fade")
+            if (local) {
+                image.setAttribute("src", source + (index + 1) + ".png");
+            }
+            else {
+                image.setAttribute("src", source[index]);
+            }
+            image.setAttribute("id", "plot");
+            image.setAttribute("style", "width:90%; display:block; margin:auto;");
+
+
+            slides.appendChild(image);
+            document.getElementById(el).appendChild(slides);
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        window.addEventListener("keydown", function (event) {
+            if (event.defaultPrevented) {
+                return;
+            }
+            switch (event.key) {
+                case "ArrowLeft":
+                    plusSlides(-1)
+                    break;
+                case "ArrowRight":
+                    plusSlides(1)
+                    break;
+                default:
+                    return;
+            }
+            event.preventDefault();
+        }, true);
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

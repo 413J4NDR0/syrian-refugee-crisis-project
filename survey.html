@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="img/icon32.jpg">
+    <script src="js/velocity.min.js"></script>
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="backgroundImage" style="background-image:url(img/background/hungary2.jpg); background-position:50% 25%;"></div>
+    <div style="color:#555;text-align:justify;line-height: 150%;">
+        <blockquote class="text" style="margin-left:7%;margin-right:7%;">
+            <br />
+            “Syria is the biggest humanitarian and refugee crisis of our time, a continuing cause of suffering for millions which should be garnering a groundswell of support around the world.”
+            <br /><br />
+            <div style="text-align:right; margin:0"><b style="color:black;">&mdash; Filippo Grandi</b>, <br />UNHCR High Commissioner</div>
+        </blockquote>
+    </div>
+
+    <div class="slides" id="cont">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+    </div>
+    <button style="margin-bottom:1%" class="slides" id="b2"><span>Close Gallery</span></button>
+    <span>
+        <button class="pusher" id="push1"><span>Take Survey</span></button>
+        <button class="pusher" id="push2"><span>View Gallery</span></button>
+    </span>
+    <div class="formWrap" id="survey">
+        <iframe style="padding-top:3%" src="https://docs.google.com/forms/d/e/1FAIpQLSdEhg5WgLafuO4N1XxeHIu8anynHYvP_bS8l5u-wrDprWqPnA/viewform?embedded=true#start=embed" width="760" height="500" frameborder="0">Loading...</iframe>
+    </div>
+    <button style="margin-bottom:1%" class="formWrap" id="b1"><span>Close Survey</span></button>
+    <div class="footer col-12">
+        Photo Credit: Associated Press/Darko Bandic
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+
+    <script>
+        $('#push1').click(function () {
+            $(".formWrap").css({
+                "display": "block",
+            });
+            $('#push1').css({
+                "display": "none",
+            });
+            $('#push2').css({
+                "display": "none",
+            });
+            $('.slides').css({
+                "display": "none",
+            });
+            $("div.formWrap").velocity("fadeIn", { duration: 500 });
+            document.getElementById("b1").innerHTML = "Close Survey";
+            $('html, body').animate({
+                scrollTop: $("#survey").offset().top
+            }, 10);
+        });
+        $('#push2').click(function () {
+            $(".formWrap").css({
+                "display": "none",
+            });
+            $('#push1').css({
+                "display": "none",
+            });
+            $('#push2').css({
+                "display": "none",
+            });
+            $('.slides').css({
+                "display": "block",
+            });
+            $("div.slides").velocity("fadeIn", { duration: 500 });
+            $('html, body').animate({
+                scrollTop: $("#cont").offset().top
+            }, 10);
+        });
+        $('#b1').click(function () {
+            $(".formWrap").css({
+                "display": "none",
+            });
+            $('#push1').css({
+                "display": "inline",
+            });
+            $('#push2').css({
+                "display": "inline",
+            });
+            $('.slides').css({
+                "display": "none",
+            });
+
+        });
+        $('#b2').click(function () {
+            $(".formWrap").css({
+                "display": "none",
+            });
+            $('#push1').css({
+                "display": "inline",
+            });
+            $('#push2').css({
+                "display": "inline",
+            });
+            $('.slides').css({
+                "display": "none",
+            });
+            
+        });
+        for (var j = 0; j < 10; j++) {
+            createSlides(j);
+        }
+        function createSlides(index) {
+            var slides = document.createElement("div");
+            var image = document.createElement("img");
+            slides.setAttribute("class", "mySlides fade")
+            image.setAttribute("src", "img/surveyImgs/img" + (index + 1) + ".png");
+            image.setAttribute("id", "surveyimage");
+            slides.appendChild(image);
+            document.getElementById("cont").appendChild(slides);
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        window.addEventListener("keydown", function (event) {
+            if (event.defaultPrevented) {
+                return;
+            }
+            switch (event.key) {
+                case "ArrowLeft":
+                    plusSlides(-1)
+                    break;
+                case "ArrowRight":
+                    plusSlides(1)
+                    break;
+                default:
+                    return;
+            }
+            event.preventDefault();
+        }, true);
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

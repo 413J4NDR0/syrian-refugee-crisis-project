@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div class="backgroundImage" style="background-image:url(img/background/greece2.jpg)"></div>
+    <div class="col-12" style="color:#555;text-align:justify;line-height: 150%;">
+        <blockquote class="text" style="margin-left:7%;margin-right:7%;">
+            <br />
+            I believe <b style="color:black;">children are the real victim</b> of any conflict so in most of my work I focus on children, I focus on
+            refugee stories, not the obvious ones but <b style="color:black">the ones that get forgotten by time</b>. <br /><br />
+            <div style="text-align:right; margin:0"><b style="color:black;">&mdash; Muhammed Muheisen</b>, <br />Pulitzer Prize Winning Photographer for the Associated Press</div>
+
+        </blockquote>
+    </div>
+    <div class="col-12">
+        <h1 style="text-decoration:underline; margin-left:5%;">Methodology</h1>
+        <p class="text">
+            The primary data source for this Data+ project is the <a href="http://www.apimages.com/" style="color:black; font-weight:bold; text-decoration:none">
+                Associated Press Photograph Database
+            </a>,
+            which is accessible to Duke University students through a license with Duke Libraries. This database uses a keyword search to facilitate queries, as well as a few
+            advanced search options. As a baseline, our group used the Google Trends result mentioned in the Introduction to limit our search to photos taken in the time period
+            of June 2015 to May 2017; that is, from the months leading up to the Alan Kurdi photo to the beginning of the project.
+            The final search queried the term &ldquo;syrian refugee&rdquo; during the above timeframe, resulting in 85 pages and about 5,000 photos.
+
+        </p>
+        <p class="text">
+            The initial data collection process was completed using
+            the open-source Java web scraping library <b>jsoup</b>. At its core, the jsoup library provides methods that can extract
+            HTML elements through their tag or CSS selector, and provide access to their attributes and innerHTML. Using this library and supplementary python code,
+            we were able to scrape the following:
+            <ul style="margin-left:10%;font-size:18px">
+                <li>the URL containing the image;</li>
+                <li>the photographer;</li>
+                <li>the caption text</li>
+                <li>the date the image was taken;</li>
+                <li>the latitude and longitude of the photo&rsquo;s location;</li>
+                <li>the unique ID given by the Associated Press</li>
+            </ul>
+
+        </p>
+        <p class="text">
+            From the unique ID, it was found that there were about 1,300 duplicate images; these duplicate images were removed, resulting in a final
+            data set of 3,639 unique images featuring Syrian refugees photographed during June 2015 to May 2017.
+        </p>
+        <p class="text">
+            Initial exploratory analyses were conducted in the <b>R</b> language, which included image distribution by country
+            using the Leaflet Package for R Studio, sentiment analysis of the caption using the Tidy Text Package, and word clouds using the Word Cloud 2 Package.
+            Of these exploratory analyses, only word clouds were included in our final visualizations.
+        </p>
+        <p class="text">
+            Following these exploratory visualizations, we used the jsoup library to conduct Reverse Google Image searches of all 3,639 images to find articles
+            that cited these images and scrape their URLs.
+            After compiling all the Google Reverse Image results, we proceeded to scrape the text of the articles.
+            Of the 3,639 total images, 579 images were published in 650 articles from the eight news agencies of interest. The scraped text of these articles were
+            used to create the word clouds in the News Outlets section and word frequency graphs in the Conclusion section.
+        </p>
+        <p class="text">
+            Data visualization then became the focus of the project. After investigating third party visualizations, it was decided that
+            creating our own website and visualizations would be the most effective option. <b>JQuery</b> is ubiquitous across all visualizations.
+            <b>Raphael JS</b> is used to handle
+            the SVG elements in the Map, Migration Route and Media Outlet Sections. <b>Velocity JS</b> is used to animate SVG elements in the
+            Map and News Outlet Sections. All visualizations were designed and programmed specifically for this project.
+        </p>
+        <p class="text" style="padding-bottom:150px">
+            A small scale survey was conducted using Google Forms. The survey has five randomly selected images that were published and
+            five that were not published, and asks respondent to gauge the emotional impact of the images and a guess for whether the image was published.
+            Originally sent to other groups in the Data+ program, the survey has been integrated into the website for potential visitors to take.
+        </p>
+    </div>
+        
+        <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+            <span class="modalClose" onclick="document.getElementById('myModal').style.display='none'">X</span>
+            <img class="modal-content" id="img" style="width:45%">
+        </div>
+    <div class="footer col-12">
+        Photo Credit: Associated Press/Muhammed Muheisen
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script>
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

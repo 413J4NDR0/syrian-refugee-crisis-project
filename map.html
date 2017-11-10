@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!-- Website designed and programmed by Alejandro Ortega, Duke University T'19
+    Data+ Group 7 would like to thank the following:
+        Muhammed Muheisen
+
+    -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <div style=" position:absolute; left:65%; top:65%">
+        <svg id="bar" width="170" height="105" style="position: relative ;top:5%">
+            <defs>
+                <linearGradient id="gradient" gradientTransform="rotate(90)">
+                    <stop id="top" offset="5%" stop-color="#c90000" />
+                    <stop id="bot" offset="95%" stop-color="#370000" />
+                </linearGradient>
+            </defs>
+            <rect width="25" height="100" fill="url(#gradient)"></rect>
+            <text id='t1' x="26" y="10" font-size="12" fill="white">- 2,000,000 or more refugees</text>
+            <text id='t2' x="26" y="50" font-size="12" fill="white">- 20,000 refugees</text>
+            <text id='t3' x="26" y="70" font-size="12" fill="white">- 5,000 refugees</text>
+            <text id='t4' x="26" y="90" font-size="12" fill="white">- 500 refugees</text>
+        </svg>
+    </div>
+    <div class="col-12" style="background-color: #6c6c71;color: white;">
+        <h2 id="mt" style="min-width:40%;color:white">Refugees of the Syrian Civil War</h2>
+        <div class="dropdown">
+            <button class="dropbtn">Change View</button>
+            <div class="dropdown-content">
+                <a id="refugees" href="#">Syrian Refugee Statistics</a>
+                <a id="total" href="#">Total Photo Distribution</a>
+                <a id="published" href="#">Published Photo Distribution</a>
+            </div>
+        </div>
+        <button class="changeMap" id="europeChange"><span>USA</span></button>
+        <button class="changeMap" id="usaChange" style="display:none"><span>Mediterranean</span></button>
+    </div>
+    <div class="row" style="background-color: #6c6c71;color: white;">
+        <div class="col-12">
+            <div id="europe" style="min-height:530px"></div>
+            <div id="usa"></div>
+            <div class="info">
+                <h3 id="cn"></h3>
+                <p id="rs"></p>
+            </div>
+        </div>
+    </div>
+    <div class="galleryWrap">
+        <span class="galleryWrap_title"></span>
+        <a href="#" class="galleryWrap_close">X</a>
+
+        <div class="slideshow-container" id="cont">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div id="contentText"></div>
+        <br />
+
+        <div id="dotWrap" style="text-align:center"></div>
+
+    </div>
+    <div class="col-12">
+        <h2 style="text-decoration:underline; margin-left:5%;">Information and Sources</h2>
+        <p class="text">
+            This map provides three detailed views of the Syrian Refugee Crisis in the Mediterranean and the United States:
+            <ul style="margin-left:10%;font-size:18px">
+                <li>The concentration of Syrian refugees and asylum seekers in 2015 and 2016;</li>
+                <li>The total distribution of photographs in the Associated Press Database from June 2015 to May 2017;</li>
+                <li>The distribution of Associated Press photographs published by the eight news agencies of interest from June 2015 to May 2017</li>
+            </ul>
+        </p>
+        <p class="text">
+            Change the current view using the Change View menu. <br />
+            Switch between the United States and the Mediterranean using the button labeled USA or Mediterranean, respectively.
+        </p>
+        <p class="text">
+            The intensity of the color provides a general sense of the information in question for each country, while hovering over a particular country
+            provides the exact information. Click on a country to view a gallery of the most cited Associated Press images in news articles. The gallery can be navigated
+            using the left and right arrow keys.
+        </p>
+        <p class="text">
+            Data for Syrian refugees and asylum seekers in the Mediterranean was taken from the <b>Office of the United Nations High Commissioner for Refugees</b> (UNHCR),
+            while refugee data in the United States was from US News & World Report. According to the UNHCR,
+            <ul style="margin-left:10%;font-size:18px">
+                <li style="padding-right:5%">
+                    <b>Refugees</b> are individuals recognised under the 1951 Convention relating to the Status of Refugees and subsequent revisions, and since 2007 refugee-like
+                    situations;
+                </li>
+                <li style="padding-right:5%">
+                    <b>Asylum-seekers</b> are individuals who have sought international protection and whose claims for refugee status have not yet been determined
+                </li>
+            </ul>
+        </p>
+        <p class="text">
+            <b>Important Note:</b> The UNHCR has the category Various/Unknown used for individuals who have multiple nationalities or whose nationality could not be ascertained;
+            countries with large refugee population tend to have significant fluctuations in this category on a year-to-year basis. In particular, Greece had 22,160 individuals with
+            this classification in 2015 and 12,833 in 2016. Although a significant portion of these refugees could certainly be of Syrian origin, the map only reflects the Syrian
+            refugee populations the UNHCR was able to verify.
+        </p>
+    </div>
+    <div class="col-12">
+        <h2 style="text-decoration:underline; margin-left:5%;">Sources</h2>
+        <p class="text" style="text-indent:-5%; margin-left:5%;">
+            1. “Population Statistics.” United Nations High Commissioner for Refugees, United Nations, <a href="popstats.unhcr.org/en/persons_of_concern" target="_blank" style="color:black; text-decoration:none"><b>popstats.unhcr.org.*</b></a>. Accessed 26 June 2017.
+        </p>
+        <p class="text" style="text-indent:-5%; margin-left:5%;">
+            2. Cook, Lindsey. "Here's Where Syrian Refugees Were Sent in Your State." U.S. News & World Report. U.S. News & World Report, 20 Nov. 2015. Web. 24 July 2017.
+        </p>
+    </div>
+    <div class="footer col-12">
+        Photo Credit: Associated Press
+        <br />
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+
+    <script src="js/europe.js"></script>
+    <script src="js/USA.js"></script>
+    <script src="js/dynamicMap.js"></script>
+    <script>
+        ready = false;
+        setView("europe", "#europe", "#usa", "#europeChange", "#usaChange");
+        main(countries, 'r16', null, rfg, rfgc);
+        changeView(countries, legendTotal);
+        changeView(countries, legendPub);
+        changeView(countries, legendRef);
+        window.addEventListener("keydown", function (event) {
+            if (event.defaultPrevented) {
+                return;
+            }
+            switch (event.key) {
+                case "ArrowLeft":
+                    if (ready) {
+                        plusSlides(-1)
+                    }
+
+                    break;
+                case "ArrowRight":
+                    if (ready) {
+                        plusSlides(1)
+                    }
+
+                    break;
+                default:
+                    return;
+            }
+            event.preventDefault();
+        }, true);
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

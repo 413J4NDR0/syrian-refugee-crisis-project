@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <link rel="icon" href="img/icon32.jpg">
+    <title>Visualizing Suffering: Photojournalism and the Syrian Refugee Crisis</title>
+</head>
+<body>
+    <div class="navbar" id="navbar1">
+        <a href="javascript:void(0);" class="mobileMenu">Menu</a>
+        <a href="index.html">Introduction</a>
+        <a href="methodology.html">Methodology</a>
+        <div class="dropdown" style="float:left">
+            <div class="dropWrap">Data Visualizations</div>
+            <div class="dropdown-content">
+                <a href="routes.html">View Migration Routes</a>
+                <a href="map.html">View Map</a>
+                <a href="news-outlets.html">View News Outlets</a>
+            </div>
+        </div>
+        <a id="surv" href="survey.html">Survey</a>
+        <a href="conclusion.html">Conclusion</a>
+        <a href="acknowledgements.html">Acknowledgements</a>
+        <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+    </div>
+    <section class="graphic">
+        <div id='logos'></div>
+    </section>
+    <div class="news">
+        <span class="close">X</span>
+        <h3 id="outlet"></h3>
+        <p id="analysis"></p>
+        <img id="wordCloud" src="" />
+    </div>
+    <div class="col-12">
+        <h2 style="text-decoration:underline; margin-left:5%;">Information</h2>
+        <p class="text" style="padding-bottom:100px">
+            This visualization provides information on how many photos each news outlet used, what percentage of the total number of articles they constituted, and a word cloud where the size of the word corresponds to frequency.
+            <br />
+            <br />
+            To view this information, click on the logo of a particular news agency. Clicking on the word cloud will enalrge the image; click anywhere to close. 
+            <br />
+            <br />
+            To return to all news outlets, click on the X of the information panel.
+            
+    </div>
+    <div id="myModal" class="modal" onclick="document.getElementById('myModal').style.display='none'">
+        <span class="modalClose" onclick="document.getElementById('myModal').style.display='none'">X</span>
+        <img class="modal-content" id="img">
+    </div>
+    <div class="footer col-12">
+        &copy; Duke University/Alejandro Ortega. All Rights Reserved
+    </div>
+    <script src="js/logos.js"></script>
+    <script>
+        function menu() {
+            var x = document.getElementById("navbar1");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>
