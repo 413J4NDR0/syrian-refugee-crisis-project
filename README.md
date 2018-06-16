@@ -2,7 +2,7 @@
 
 ![This image by Alexander Zemlianichenko depicts Syrian refugees crossing the Aegean Sea by dinghy to reach the Greek island of Kos. Alexander Zemlianichenko/AP](http://www.sigmalive.com/en/uploads/images/news/European_Commission-migrant-crisis-thanou.jpg)
 
-This is a website I programmed for a Summer 2017 Duke University Data+ Project that sought to analyze how images of Syrian refugees . My contributions to this project consisted of:
+This is a website I programmed for a Summer 2017 Duke University Data+ Project that analyzed how images of Syrian refugees were being disseminated by news agencies. More information on the project background and our methodologies is available on the Github pages site. My contributions to this project consisted of:
 
 - Engineering a scalable Java application that interfaces with the AP Photos database, conducts reverse image searches for articles using AP images featuring Syrian refugees, and compiles article text into a database
 
