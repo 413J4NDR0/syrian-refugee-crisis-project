@@ -8,8 +8,8 @@ This is a website I programmed for a Summer 2017 Duke University Data+ Project t
 
 - Programming this site that contains the results of the semantic text analysis I performed in R, and interactive visualizations that contextualize the Syrian Refugee Crisis and the coverage of the crisis by news agencies I programmed in JavaScript
 
-__Faculty Lead: Dr. Astrid Giugni__
+__Faculty Lead:__ Dr. Astrid Giugni
 
-__Project Manager: Dr. Jessica Hines__
+__Project Manager:__ Dr. Jessica Hines
 
-__Team Members: Alejandro Ortega, Peilin Lai, Robert Ha__
+__Team Members:__ Alejandro Ortega, Peilin Lai, Robert Ha
