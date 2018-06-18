@@ -88,4 +88,4 @@ __Photographers__:
 * Visar Kryeziu
 * Vladimir Isachenkov
 * Yorgos Karahalis
-* dpa via AP
+* DPA via AP
