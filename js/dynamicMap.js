@@ -1,5 +1,5 @@
 //Variable Declarations
-//This is the propriety work of Alejandro Ortega (ctrlxxx). It is not to be distributed. All Rights Reserved.
+//This is the propriety work of Alejandro Ortega. It is not to be distributed. All Rights Reserved.
 var rfg = [150, 300, 500, 1000, 1500, 3000, 5000, 10000, 30000, 50000, 100000, 200000, 500000, 800000, 2000000]
 var rfgc = ['#000', '#1a0000', '#1f0000', '#3a0000', '#3f0000', '#4a0000', '#4f0000', '#6a0000', '#6f0000', '#7a0000', '#8a0000', '#ca0000', '#da0000', '#df0000', '#ef0000', '#ff0000']
 var total = [0, 10, 20, 50, 80, 100, 500, 600]
@@ -288,7 +288,7 @@ function setView(stateC, show0, hide0, show1, hide1) {
             "display": "block",
             "margin": "auto",
             "width": "57%",
-            "padding-top": "3.9%",
+            "padding-top": "10%",
 
         })
         var europeX = document.getElementById("usa").getBoundingClientRect().width - document.getElementById("europe").getBoundingClientRect().width;
@@ -298,6 +298,7 @@ function setView(stateC, show0, hide0, show1, hide1) {
             "display": "block",
             "margin": "auto",
             "width": "40%",
+            "padding-top" : "5%"
 
         })
         $("#bar").velocity({ translateX:  "0px"});

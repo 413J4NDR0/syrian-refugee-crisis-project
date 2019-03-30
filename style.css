@@ -541,6 +541,10 @@ Fading animation .fade {
             right: 0;
         }
 
+div#europe>svg {height: 75vh; width: auto;}
+
+div#usa>svg {height: 60vh; width: auto;}
+
 #prevC {
     /*position: relative;*/
     left:15%;

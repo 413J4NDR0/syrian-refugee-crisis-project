@@ -1,13 +1,13 @@
 var rsr = Raphael('europe', '239.31', '252.52');
 rsr.setViewBox(0, 0, 239.31, 252.52);
 rsr.canvas.setAttribute('preserveAspectRatio', 'none');
-$('div#europe>svg').attr('width', 478.62 * (screen.width / 1280)).attr('height', 505.04 * (screen.height / 720));
+//$('div#europe>svg').attr('width', 478.62 * (screen.width / 1280)).attr('height', 505.04 * (screen.height / 720));
 var $map = $('#map');
 var $galleryWrap = $('.galleryWrap');
 var countries = [];
-// United Arab Emirates, Albania, Armenia, Austria, Azerbaijan, Bosnia And Herzegovina, Belgium, Bulgaria, Belarus, 
-//Switzerland, Cyprus, Czech Republic, Germany, Denmark, Algeria, Estonia, Egypt, Spain, Finland, France, United Kingdom, Georgia, 
-//Greece, Croatia, Hungary, Ireland, Israel, Iraq, Italy, Jordan, 
+// United Arab Emirates, Albania, Armenia, Austria, Azerbaijan, Bosnia And Herzegovina, Belgium, Bulgaria, Belarus,
+//Switzerland, Cyprus, Czech Republic, Germany, Denmark, Algeria, Estonia, Egypt, Spain, Finland, France, United Kingdom, Georgia,
+//Greece, Croatia, Hungary, Ireland, Israel, Iraq, Italy, Jordan,
 //Luxembourg, Kosovo, Kuwait, Lebanon, Lithuania, Latvia, Libya, Morocco
 //Montenegro, Macedonia, Moldova, Netherlands, Norway, Oman, Poland, Palestinian Territories, Portugal, Qatar, Romania, Serbia,
 //Russia, Saudi Arabia, Slovenia, Slovakia, Syrian Arab Republic, Sweden, Tunisia, Turkey, Ukraine, Yemen

@@ -1,7 +1,7 @@
 var usa = Raphael('usa', '947.5', '589.5');
 usa.setViewBox(0, 0, 947.5, 589.5);
 usa.canvas.setAttribute('preserveAspectRatio', 'none');
-$('div#usa>svg').attr('width', 947.5 * 0.7735 * (screen.width / 1280)).attr('height', 589.5 * 0.7735 * (screen.height / 720));
+//$('div#usa>svg').attr('width', 947.5 * 0.7735 * (screen.width / 1280)).attr('height', 589.5 * 0.7735 * (screen.height / 720));
 var states = [];
 var USAL = usa.path("M679,368.9l8.1,27.5l7.2,21.9l3.6,6.8l2.2,3.8l-2.7,4.4l-0.2,7.3l1.6,4.1v4.1l-0.1,3.8l1.6,2.8 l1.3,2.6l-39.9,4.5l-11.1,2.4l-0.1,1.8l5,5.1l-0.6,4.6l-1.1,3.3l-17.8-1l-3.5-34.7l0.3-36.6l0.8-29.6l-1.7-4.3l23.4-2.2L679,368.9z ").attr({ id: 'US-AL', class: 'st0', parent: 'group_a', 'stroke-width': '.75', 'stroke-opacity': '1', 'fill': '#000000' }).data('id', 'USAL');
 var USAR = usa.path("M602.2,352.4l-0.1,1.9l-1.7,3.3l-3.1,2.4l-0.5,3.8l-2.7,3.2l0.6,6.6l-2,2.3l-0.2,1.8l-3.2,1.9 l0.1,3.3l-2.1,6.2l-2.1,1.4l-3.2,3.3l-1.7,4.8l-3.7,8.1l-0.2,5.4l2.5,5.8l-0.7,4.5l-16.2,0l-20.9,1.6l-18.5,0.5l0.8-12.9h-4.4 l-3.7,0.4l-1-1.5l0.2-19.9l0-22.1l-4-23.9l22.3-0.2l20.2-0.6l19.3-0.9l20.9,0.2l1.7,2.7l-1.9,2.6l-1.9,2.6l-1,2.3L602.2,352.4z").attr({ id: 'US-AR', class: 'st0', parent: 'group_a', 'stroke-width': '.75', 'stroke-opacity': '1', 'fill': '#000000' }).data('id', 'USAR');
