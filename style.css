@@ -194,7 +194,24 @@ blockquote.text{
 
         .dropdown-content a:hover {
             background-color: #f1f1f1;
+            cursor: pointer;
         }
+
+        .dropdown-content div {
+            float: none;
+            font-size: 16px;
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+    
+    
+            .dropdown-content div:hover {
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
 
 
 .dropdown:hover .dropdown-content {
@@ -289,6 +306,7 @@ blockquote.text{
     width: 40%;
 }
 #mt {
+    float: left;
     margin-left: 3.5%;
     display: inline-block;
     margin-top: unset;
