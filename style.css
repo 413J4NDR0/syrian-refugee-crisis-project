@@ -289,7 +289,6 @@ blockquote.text{
     width: 40%;
 }
 #mt {
-    float:left;
     margin-left: 3.5%;
     display: inline-block;
     margin-top: unset;
@@ -487,11 +486,10 @@ Fading animation .fade {
         opacity: 0.7;
     }
 #logos {
-    display: block;
-    margin: auto;
-    width: 70%;
     padding: 2%;
-    min-height: 627px;
+    width: 50vw;
+    height: auto;
+    padding-left: 25%
 }
 .formWrap {
     display: block;
